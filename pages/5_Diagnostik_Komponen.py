@@ -38,9 +38,16 @@ else:
     cohort["label"] = cohort["label"].astype("category").cat.set_categories(order, ordered=True)
     st.plotly_chart(charts.cohort_bars(cohort.sort_values("label")), width="stretch")
     piv = cohort.pivot_table(index="label", columns="kohort", values="avg_nilai")
-    if piv.shape[1] == 2:
-        piv["Selisih"] = piv.iloc[:, 0] - piv.iloc[:, 1]
-        worst = piv["Selisih"].abs().idxmax()
-        st.success(f"**So what:** kesenjangan kohort terbesar ada pada komponen **{worst}** - "
-                   "khas masalah *onboarding* (perencanaan & administrasi), bukan penyerapan. "
-                   "Artinya dapat diperbaiki lewat pelatihan satu siklus, bukan indikasi ketidakmampuan.")
+    baru_col = next((c for c in piv.columns if "Baru" in c), None)
+    lama_col = next((c for c in piv.columns if "Lama" in c), None)
+    if baru_col and lama_col:
+        lag = (piv[lama_col] - piv[baru_col]).sort_values(ascending=False)  # + = satker baru tertinggal
+        worst, worst_val = lag.index[0], lag.iloc[0]
+        ahead, ahead_val = lag.index[-1], -lag.iloc[-1]
+        st.success(
+            f"**So what:** kohort satker baru paling tertinggal pada **{worst}** "
+            f"(-{worst_val:.1f} poin vs satker lama) - khas unit yang baru terbentuk di "
+            f"pertengahan tahun: anggaran turun belakangan dan rencana kas belum matang. "
+            f"Sebaliknya, kohort baru justru lebih unggul pada **{ahead}** (+{ahead_val:.1f} poin). "
+            "Selisih ini menyusut seiring unit matang - sasaran pembinaan yang jelas, "
+            "bukan indikasi ketidakmampuan.")

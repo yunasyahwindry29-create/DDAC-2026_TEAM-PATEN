@@ -36,9 +36,11 @@ ACTS = {
         "Di balik rata-rata yang naik, masih ada ekor satker berkinerja rendah. "
         "Kita perlu melihat sebaran, bukan hanya nilai tengah."),
     3: ("Pembentukan Kabinet Merah Putih 2024",
-        "Reorganisasi pemerintahan akhir 2024 menambah ribuan satker baru dan "
-        "kementerian baru. Kohort baru cenderung tertinggal pada komponen 'onboarding' "
-        "(perencanaan & administrasi), bukan penyerapan."),
+        "Reorganisasi pemerintahan akhir 2024 menambah sekitar 3.400 satker baru. "
+        "Kohort baru ini paling tertinggal pada Penyerapan Anggaran, diikuti akurasi "
+        "rencana kas (Deviasi Halaman III DIPA) dan pengelolaan UP/TUP - khas unit yang "
+        "baru terbentuk dan menerima anggaran di pertengahan tahun - meski justru lebih "
+        "unggul pada Belanja Kontraktual dan Penyelesaian Tagihan."),
     4: ("Di Mana Titik Lemahnya",
         "Matriks K/L x Provinsi memisahkan dua jenis masalah: provinsi yang lemah di "
         "hampir semua K/L (masalah kapasitas wilayah) versus K/L yang lemah di hampir "
