@@ -98,6 +98,20 @@ def matrix_heatmap(piv, zmin=80, zmax=100):
     return fig
 
 
+def reorg_heatmap(vals, ns):
+    """Before/after reorganization heatmap: ministries (rows) x components (cols).
+    `ns` (same shape) supplies satker counts for the hover."""
+    fig = px.imshow(vals, color_continuous_scale=DIVERGING_SCALE, zmin=40, zmax=100,
+                    aspect="auto", labels=dict(color="Nilai"))
+    fig.update_traces(customdata=ns.values,
+                      hovertemplate="%{y}<br>%{x}: %{z:.1f}<br>%{customdata:.0f} satker<extra></extra>")
+    fig.update_xaxes(side="top", tickangle=40, title_text="")
+    fig.update_yaxes(title_text="", tickfont=dict(size=11))
+    fig.update_layout(margin=dict(l=10, r=10, t=80, b=10), height=700,
+                      coloraxis_colorbar=dict(title="Nilai"))
+    return fig
+
+
 def component_small_multiples(df, facet_col="label"):
     fig = px.line(df, x="year", y="avg_nilai", facet_col=facet_col, facet_col_wrap=4,
                   markers=True, labels={"year": "", "avg_nilai": ""})

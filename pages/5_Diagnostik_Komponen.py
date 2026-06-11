@@ -51,3 +51,26 @@ else:
             f"Sebaliknya, kohort baru justru lebih unggul pada **{ahead}** (+{ahead_val:.1f} poin). "
             "Selisih ini menyusut seiring unit matang - sasaran pembinaan yang jelas, "
             "bukan indikasi ketidakmampuan.")
+
+st.divider()
+st.subheader("Sorotan K/L Terdampak Reorganisasi: Sebelum (2024) vs Sesudah (2025)")
+st.caption("9 kementerian dipecah menjadi 21 (Perpres 139/2024). Tiap blok menampilkan kementerian "
+           "**pendahulu** (posisi 2024) tepat di atas kementerian **penerus**-nya (posisi 2025), "
+           "sehingga terlihat komponen mana yang merosot setelah pemisahan.")
+
+vals, ns = data.reorg_before_after_matrix()
+st.plotly_chart(charts.reorg_heatmap(vals, ns), width="stretch")
+
+drop = data.reorg_biggest_drop()
+if drop:
+    st.success(
+        f"**So what:** penurunan terbesar pasca-pemisahan ada pada **{drop['succ']}** di komponen "
+        f"**{drop['component']}** ({drop['before']:.1f} -> {drop['after']:.1f}, turun "
+        f"{drop['drop']:.1f} poin) - kapasitas eksekusi tidak otomatis terbawa saat unit dipecah. "
+        "Komponen kontraktual & penyelesaian tagihan paling rapuh karena memerlukan SDM dan "
+        "proses yang baru dibangun. Inilah peta prioritas pembinaan untuk K/L hasil reorganisasi.")
+st.caption("Catatan: pendahulu = posisi Desember 2024 (tahun penuh terakhir sebelum pisah), penerus = "
+           "Desember 2025. Sebagian penerus bersatker sangat sedikit (jumlah satker tampil saat "
+           "hover). Kementerian Pariwisata belum memiliki satker ber-IKPA pada 2025 (hanya Ekraf & BOB "
+           "yang tampil). Komponen Dispensasi SPM dikecualikan (bobot ~0 untuk semua). Penempatan "
+           "kementerian koordinator mengikuti Perpres 139/2024.")

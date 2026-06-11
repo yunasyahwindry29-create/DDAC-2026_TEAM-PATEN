@@ -14,6 +14,8 @@ import streamlit as st
 from lib.config import (
     DATA, YEARS, FINAL_PERIODE, EXCELLENT_THRESHOLD, HEALTHY_THRESHOLD,
     COMPONENT_FLOOR, REGION_ORDER, component_label,
+    REORG_FAMILIES, REORG_PREDECESSOR_YEAR, REORG_SUCCESSOR_YEAR,
+    REORG_HEATMAP_COMPONENTS,
 )
 
 UNMAPPED = "00"
@@ -209,6 +211,77 @@ def cohort_comparison(year: int = 2025) -> pd.DataFrame | None:
     df = con.execute(sql).df()
     df["label"] = df["component"].map(component_label)
     return df
+
+
+# --- Reorganization before/after (predecessor 2024 vs successors 2025) -------
+@st.cache_data(show_spinner=False)
+def reorg_before_after_matrix():
+    """Heatmap source for the 2024 reorganization. Returns (vals, ns):
+    both indexed by an ordered list of ministry rows (predecessor at 2024, its
+    successors at 2025, a blank spacer between families), columns = component
+    labels. `vals` holds avg_nilai, `ns` holds n_satker (for hover)."""
+    acm = load("agg_component_ministry_year")
+    shorts = dict(zip(dim_ministry()["kdba"], dim_ministry()["ministry_short"]))
+    comp_labels = [component_label(c) for c in REORG_HEATMAP_COMPONENTS]
+    val_rows, n_rows, order = {}, {}, []
+
+    def _add(kdba, year, label):
+        sub = acm[(acm["kdba"] == kdba) & (acm["year"] == year)]
+        if sub.empty:
+            return False
+        vmap = dict(zip(sub["component"], sub["avg_nilai"]))
+        nmap = dict(zip(sub["component"], sub["n_satker"]))
+        val_rows[label] = {cl: vmap.get(c) for c, cl in zip(REORG_HEATMAP_COMPONENTS, comp_labels)}
+        n_rows[label] = {cl: nmap.get(c) for c, cl in zip(REORG_HEATMAP_COMPONENTS, comp_labels)}
+        order.append(label)
+        return True
+
+    py = str(REORG_PREDECESSOR_YEAR)[2:]
+    sy = str(REORG_SUCCESSOR_YEAR)[2:]
+    spacer = 0
+    for _fam, pred, succs in REORG_FAMILIES:
+        added = _add(pred, REORG_PREDECESSOR_YEAR, f"{shorts.get(pred, 'BA ' + pred)} · '{py}")
+        for s in succs:
+            added = _add(s, REORG_SUCCESSOR_YEAR, f"   ↳ {shorts.get(s, 'BA ' + s)} · '{sy}") or added
+        if added:
+            spacer += 1
+            blank = " " * spacer
+            val_rows[blank] = {cl: None for cl in comp_labels}
+            n_rows[blank] = {cl: None for cl in comp_labels}
+            order.append(blank)
+    if order and not order[-1].strip():
+        order.pop()
+
+    vals = pd.DataFrame(val_rows).T.reindex(order)[comp_labels]
+    ns = pd.DataFrame(n_rows).T.reindex(order)[comp_labels]
+    return vals, ns
+
+
+@st.cache_data(show_spinner=False)
+def reorg_biggest_drop(min_satker: int = 20):
+    """Largest predecessor(2024) -> successor(2025) component drop, restricted to
+    successors with enough satker to be reliable. Returns a dict or None."""
+    acm = load("agg_component_ministry_year")
+    shorts = dict(zip(dim_ministry()["kdba"], dim_ministry()["ministry_short"]))
+    best = None
+    for fam, pred, succs in REORG_FAMILIES:
+        p = acm[(acm["kdba"] == pred) & (acm["year"] == REORG_PREDECESSOR_YEAR)]
+        if p.empty:
+            continue
+        pmap = dict(zip(p["component"], p["avg_nilai"]))
+        for s in succs:
+            q = acm[(acm["kdba"] == s) & (acm["year"] == REORG_SUCCESSOR_YEAR)]
+            if q.empty or q["n_satker"].max() < min_satker:
+                continue
+            qv = dict(zip(q["component"], q["avg_nilai"]))
+            for c in REORG_HEATMAP_COMPONENTS:
+                if c in pmap and c in qv:
+                    drop = pmap[c] - qv[c]
+                    if best is None or drop > best["drop"]:
+                        best = {"family": fam, "succ": shorts.get(s, "BA " + s),
+                                "component": component_label(c),
+                                "before": pmap[c], "after": qv[c], "drop": drop}
+    return best
 
 
 # --- F4: at-risk watchlist (needs satker fact, local only) -------------------

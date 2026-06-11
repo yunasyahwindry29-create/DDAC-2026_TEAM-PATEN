@@ -60,6 +60,29 @@ REGION_ORDER = [
     "Bali dan Nusa Tenggara", "Sulawesi", "Maluku dan Papua",
 ]
 
+# --- 2024 Kabinet Merah Putih reorganization (Perpres 139/2024) -------------
+# 9 predecessor ministries split into 21 successors. Predecessors have satker
+# only through 2024; successors only from 2025. Used for the before/after
+# component heatmap on the Diagnostik Komponen page.
+# Each entry: (family_label, predecessor_kdba, [successor_kdba, ...]).
+REORG_FAMILIES = [
+    ("Hukum, HAM & Pemasyarakatan (eks Kemenkumham)", "013", ["135", "136", "137"]),
+    ("Pendidikan & Kebudayaan (eks Kemendikbudristek)", "023", ["138", "139", "140"]),
+    ("Lingkungan Hidup & Kehutanan (eks KLHK)", "029", ["143", "144"]),
+    ("Infrastruktur & Perumahan (eks PUPR)", "033", ["145", "146", "132"]),
+    ("Pariwisata & Ekonomi Kreatif (eks Kemenparekraf)", "040", ["148", "147"]),
+    ("Koperasi & UMKM (eks Kemenkop UKM)", "044", ["149", "150"]),
+    ("Desa & Transmigrasi (eks Kemendes PDTT)", "067", ["151", "152"]),
+    ("Koordinator Polhukam (eks Kemenko Polhukam)", "034", ["129", "130"]),
+    ("Koordinator PMK (eks Kemenko PMK)", "036", ["134"]),
+]
+REORG_PREDECESSOR_YEAR = 2024
+REORG_SUCCESSOR_YEAR = 2025
+# Components shown in the reorg heatmap (Dispensasi SPM excluded: ~0 / zero-weight for all).
+REORG_HEATMAP_COMPONENTS = [
+    "REV_DIPA", "HAL3_DIPA", "REALISASI", "KONTRAKTUAL", "TAGIHAN", "UP_TUP", "CAPUT",
+]
+
 # --- Color palette -----------------------------------------------------------
 COLOR_PRIMARY = "#1A5276"
 COLOR_GOOD = "#1E8449"
