@@ -35,7 +35,7 @@ ACTS = {
     2: ("Sebaran yang Tersembunyi",
         "Di balik rata-rata yang naik, masih ada ekor satker berkinerja rendah. "
         "Kita perlu melihat sebaran, bukan hanya nilai tengah."),
-    3: ("Guncangan 2024",
+    3: ("Pembentukan Kabinet Merah Putih 2024",
         "Reorganisasi pemerintahan akhir 2024 menambah ribuan satker baru dan "
         "kementerian baru. Kohort baru cenderung tertinggal pada komponen 'onboarding' "
         "(perencanaan & administrasi), bukan penyerapan."),
