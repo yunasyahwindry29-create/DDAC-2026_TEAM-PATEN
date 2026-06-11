@@ -1,0 +1,35 @@
+kdkanwil,province_name,province_short,region_island,geojson_state,lat,lon
+01,Aceh,Aceh,Sumatera,Aceh,4.36,97.00
+02,Sumatera Utara,Sumut,Sumatera,Sumatera Utara,2.60,99.00
+03,Sumatera Barat,Sumbar,Sumatera,Sumatera Barat,-0.70,100.60
+04,Riau,Riau,Sumatera,Riau,0.50,101.70
+05,Jambi,Jambi,Sumatera,Jambi,-1.60,103.00
+06,Sumatera Selatan,Sumsel,Sumatera,Sumatera Selatan,-3.30,104.00
+07,Lampung,Lampung,Sumatera,Lampung,-4.80,105.20
+08,Bengkulu,Bengkulu,Sumatera,Bengkulu,-3.60,102.30
+09,Bangka Belitung,Babel,Sumatera,Bangka-Belitung,-2.40,106.50
+10,Banten,Banten,Jawa,Banten,-6.40,106.10
+11,DKI Jakarta,DKI,Jawa,Jakarta Raya,-6.20,106.85
+12,Jawa Barat,Jabar,Jawa,Jawa Barat,-6.90,107.60
+13,Jawa Tengah,Jateng,Jawa,Jawa Tengah,-7.30,110.00
+14,D.I. Yogyakarta,DIY,Jawa,Yogyakarta,-7.87,110.43
+15,Jawa Timur,Jatim,Jawa,Jawa Timur,-7.70,112.50
+16,Kalimantan Barat,Kalbar,Kalimantan,Kalimantan Barat,0.00,110.00
+17,Kalimantan Tengah,Kalteng,Kalimantan,Kalimantan Tengah,-1.70,113.40
+18,Kalimantan Selatan,Kalsel,Kalimantan,Kalimantan Selatan,-3.10,115.30
+19,Kalimantan Timur,Kaltim,Kalimantan,Kalimantan Timur,0.50,116.50
+20,Bali,Bali,Bali dan Nusa Tenggara,Bali,-8.40,115.20
+21,Nusa Tenggara Barat,NTB,Bali dan Nusa Tenggara,Nusa Tenggara Barat,-8.70,117.40
+22,Nusa Tenggara Timur,NTT,Bali dan Nusa Tenggara,Nusa Tenggara Timur,-8.70,121.00
+23,Sulawesi Selatan,Sulsel,Sulawesi,Sulawesi Selatan,-4.00,119.90
+24,Sulawesi Tengah,Sulteng,Sulawesi,Sulawesi Tengah,-1.40,121.40
+25,Sulawesi Tenggara,Sultra,Sulawesi,Sulawesi Tenggara,-4.10,122.20
+26,Gorontalo,Gorontalo,Sulawesi,Gorontalo,0.70,122.40
+27,Sulawesi Utara,Sulut,Sulawesi,Sulawesi Utara,1.00,124.50
+28,Maluku Utara,Malut,Maluku dan Papua,Maluku Utara,1.00,127.80
+29,Maluku,Maluku,Maluku dan Papua,Maluku,-3.70,129.00
+30,Papua,Papua,Maluku dan Papua,Papua,-4.00,138.00
+31,Kepulauan Riau,Kepri,Sumatera,Kepulauan Riau,0.90,104.50
+32,Sulawesi Barat,Sulbar,Sulawesi,Sulawesi Barat,-2.50,119.30
+33,Papua Barat,Pabar,Maluku dan Papua,Papua Barat,-1.30,133.20
+34,Kalimantan Utara,Kaltara,Kalimantan,Kalimantan Utara,3.00,116.50

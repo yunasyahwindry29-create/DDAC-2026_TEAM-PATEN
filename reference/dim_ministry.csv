@@ -1,0 +1,117 @@
+kdba,ministry_name,ministry_short,kategori
+001,Majelis Permusyawaratan Rakyat,MPR,Lembaga Negara
+002,Dewan Perwakilan Rakyat,DPR,Lembaga Negara
+004,Badan Pemeriksa Keuangan,BPK,Lembaga Negara
+005,Mahkamah Agung,MA,Lembaga Negara
+006,Kejaksaan Agung,Kejaksaan,Kementerian
+007,Kementerian Sekretariat Negara,Setneg,Kementerian
+010,Kementerian Dalam Negeri,Kemendagri,Kementerian
+011,Kementerian Luar Negeri,Kemenlu,Kementerian
+012,Kementerian Pertahanan,Kemhan,Kementerian
+013,Kementerian Hukum dan Hak Asasi Manusia,Kemenkumham,Kementerian
+015,Kementerian Keuangan,Kemenkeu,Kementerian
+018,Kementerian Pertanian,Kementan,Kementerian
+019,Kementerian Perindustrian,Kemenperin,Kementerian
+020,Kementerian Energi dan Sumber Daya Mineral,Kementerian ESDM,Kementerian
+022,Kementerian Perhubungan,Kemenhub,Kementerian
+023,Kementerian Pendidikan dan Kebudayaan,Kemendikbud,Kementerian
+024,Kementerian Kesehatan,Kemenkes,Kementerian
+025,Kementerian Agama,Kemenag,Kementerian
+026,Kementerian Ketenagakerjaan,Kemnaker,Kementerian
+027,Kementerian Sosial,Kemensos,Kementerian
+029,Kementerian Lingkungan Hidup dan Kehutanan,KLHK,Kementerian
+032,Kementerian Kelautan dan Perikanan,KKP,Kementerian
+033,Kementerian Pekerjaan Umum dan Perumahan Rakyat,Kemen PUPR,Kementerian
+034,Kementerian Koordinator Bidang Politik Hukum dan Keamanan,Kemenko Polhukam,Kementerian
+035,Kementerian Koordinator Bidang Perekonomian,Kemenko Perekonomian,Kementerian
+036,Kementerian Koordinator Bidang Pembangunan Manusia dan Kebudayaan,Kemenko PMK,Kementerian
+040,Kementerian Pariwisata dan Ekonomi Kreatif,Kemenparekraf,Kementerian
+041,Kementerian Badan Usaha Milik Negara,Kementerian BUMN,Kementerian
+042,Badan Riset dan Inovasi Nasional,BRIN,Lembaga
+044,Kementerian Koperasi dan Usaha Kecil dan Menengah,KemenkopUKM,Kementerian
+047,Kementerian Pemberdayaan Perempuan dan Perlindungan Anak,KemenPPPA,Kementerian
+048,Kementerian Pendayagunaan Aparatur Negara dan Reformasi Birokrasi,KemenPANRB,Kementerian
+050,Badan Intelijen Negara,BIN,Lembaga
+051,Badan Siber dan Sandi Negara,BSSN,Lembaga
+052,Dewan Ketahanan Nasional,Wantannas,Lembaga
+054,Badan Pusat Statistik,BPS,Lembaga
+055,Kementerian Perencanaan Pembangunan Nasional/Bappenas,Bappenas,Kementerian
+056,Kementerian Agraria dan Tata Ruang/Badan Pertanahan Nasional,ATR/BPN,Kementerian
+057,Perpustakaan Nasional,Perpusnas,Lembaga
+059,Kementerian Komunikasi dan Informatika,Kemenkominfo,Kementerian
+060,Kepolisian Negara Republik Indonesia,POLRI,Lembaga
+063,Badan Pengawas Obat dan Makanan,BPOM,Lembaga
+064,Lembaga Ketahanan Nasional,Lemhannas,Lembaga
+065,Kementerian Investasi/Badan Koordinasi Penanaman Modal,BKPM,Kementerian
+066,Badan Narkotika Nasional,BNN,Lembaga
+067,Kementerian Desa Pembangunan Daerah Tertinggal dan Transmigrasi,Kemendes PDTT,Kementerian
+068,Badan Kependudukan dan Keluarga Berencana Nasional,BKKBN,Lembaga
+074,Komisi Nasional Hak Asasi Manusia,Komnas HAM,Lembaga
+075,Badan Meteorologi Klimatologi dan Geofisika,BMKG,Lembaga
+076,Komisi Pemilihan Umum,KPU,Lembaga
+077,Mahkamah Konstitusi,MK,Lembaga Negara
+078,Pusat Pelaporan dan Analisis Transaksi Keuangan,PPATK,Lembaga
+079,Lembaga Ilmu Pengetahuan Indonesia,LIPI,Lembaga
+080,Badan Tenaga Nuklir Nasional,BATAN,Lembaga
+081,Badan Pengkajian dan Penerapan Teknologi,BPPT,Lembaga
+082,Lembaga Penerbangan dan Antariksa Nasional,LAPAN,Lembaga
+083,Badan Informasi Geospasial,BIG,Lembaga
+084,Badan Standardisasi Nasional,BSN,Lembaga
+085,Badan Pengawas Tenaga Nuklir,BAPETEN,Lembaga
+086,Lembaga Administrasi Negara,LAN,Lembaga
+087,Arsip Nasional Republik Indonesia,ANRI,Lembaga
+088,Badan Kepegawaian Negara,BKN,Lembaga
+089,Badan Pengawasan Keuangan dan Pembangunan,BPKP,Lembaga
+090,Kementerian Perdagangan,Kemendag,Kementerian
+092,Kementerian Pemuda dan Olahraga,Kemenpora,Kementerian
+093,Komisi Pemberantasan Korupsi,KPK,Lembaga
+095,Dewan Perwakilan Daerah,DPD,Lembaga Negara
+100,Komisi Yudisial,KY,Lembaga Negara
+103,Badan Nasional Penanggulangan Bencana,BNPB,Lembaga
+104,Badan Pelindungan Pekerja Migran Indonesia,BP2MI,Lembaga
+106,Lembaga Kebijakan Pengadaan Barang/Jasa Pemerintah,LKPP,Lembaga
+107,Badan Nasional Pencarian dan Pertolongan,Basarnas,Lembaga
+108,Komisi Pengawas Persaingan Usaha,KPPU,Lembaga
+109,Badan Pengembangan Wilayah Surabaya-Madura,BPWS,Lembaga
+110,Ombudsman Republik Indonesia,Ombudsman,Lembaga Negara
+111,Badan Nasional Pengelola Perbatasan,BNPP,Lembaga
+112,Badan Pengusahaan Kawasan Perdagangan Bebas dan Pelabuhan Bebas Batam,BP Batam,Lembaga
+114,Sekretariat Kabinet,Setkab,Lembaga
+115,Badan Pengawas Pemilihan Umum,Bawaslu,Lembaga
+116,Lembaga Penyiaran Publik Radio Republik Indonesia,LPP RRI,Lembaga
+117,Lembaga Penyiaran Publik Televisi Republik Indonesia,LPP TVRI,Lembaga
+119,Badan Keamanan Laut,Bakamla,Lembaga
+120,Kementerian Koordinator Bidang Kemaritiman dan Investasi,Kemenko Marves,Kementerian
+122,Badan Ekonomi Kreatif,Bekraf,Lembaga
+123,Badan Pembinaan Ideologi Pancasila,BPIP,Lembaga
+125,Komisi Aparatur Sipil Negara,KASN,Lembaga
+126,Lembaga Perlindungan Saksi dan Korban,LPSK,Lembaga
+113,Badan Nasional Penanggulangan Terorisme,BNPT,Lembaga
+118,Badan Pengusahaan Kawasan Perdagangan Bebas dan Pelabuhan Bebas Sabang,BP Sabang,Lembaga
+124,Badan Riset dan Inovasi Nasional,BRIN,Lembaga
+127,Badan Karantina Indonesia,Barantin,Lembaga
+128,Badan Gizi Nasional,BGN,Lembaga
+129,Kementerian Koordinator Bidang Politik dan Keamanan,Kemenko Polkam,Kementerian
+130,Kementerian Koordinator Bidang Hukum HAM Imigrasi dan Pemasyarakatan,Kemenko Kumham Imipas,Kementerian
+131,Kementerian Koordinator Bidang Pangan,Kemenko Pangan,Kementerian
+132,Kementerian Koordinator Bidang Infrastruktur dan Pembangunan Kewilayahan,Kemenko IPK,Kementerian
+134,Kementerian Koordinator Bidang Pemberdayaan Masyarakat,Kemenko PM,Kementerian
+135,Kementerian Hukum,Kemenkum,Kementerian
+136,Kementerian Hak Asasi Manusia,Kemenham,Kementerian
+137,Kementerian Imigrasi dan Pemasyarakatan,Kemenimipas,Kementerian
+138,Kementerian Pendidikan Dasar dan Menengah,Kemendikdasmen,Kementerian
+139,Kementerian Pendidikan Tinggi Sains dan Teknologi,Kemendiktisaintek,Kementerian
+140,Kementerian Kebudayaan,Kemenbud,Kementerian
+141,Kementerian Haji dan Umrah,Kemenhaj,Kementerian
+142,Badan Penyelenggara Jaminan Produk Halal,BPJPH,Lembaga
+143,Kementerian Kehutanan,Kemenhut,Kementerian
+144,Kementerian Lingkungan Hidup,Kemen LH,Kementerian
+145,Kementerian Pekerjaan Umum,Kemen PU,Kementerian
+146,Kementerian Perumahan dan Kawasan Permukiman,Kemen PKP,Kementerian
+147,Badan Pelaksana Otorita Borobudur,BOB,Lembaga
+148,Kementerian Ekonomi Kreatif,Kemenekraf,Kementerian
+149,Kementerian Koperasi,Kemenkop,Kementerian
+150,Kementerian Usaha Mikro Kecil dan Menengah,Kementerian UMKM,Kementerian
+151,Kementerian Desa dan Pembangunan Daerah Tertinggal,Kemendes PDT,Kementerian
+152,Kementerian Transmigrasi,Kementrans,Kementerian
+999,Bendahara Umum Negara,BUN,BUN

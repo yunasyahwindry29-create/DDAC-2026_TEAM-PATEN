@@ -1,0 +1,19 @@
+# --- Competition data-use compliance ---
+# Raw committee data and satker-level (row-level) facts must NOT be redistributed.
+# Only aggregated tables + dimensions + metadata are committed to the public repo.
+data_raw/
+data/fact_ikpa_satker.parquet
+data/fact_ikpa_component.parquet
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+*.swp
+
+# test / tooling artifacts
+.playwright-mcp/
