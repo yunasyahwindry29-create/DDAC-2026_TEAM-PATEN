@@ -11,7 +11,6 @@ st.set_page_config(page_title="IKPA Insight - DDAC 2026", page_icon="📊",
 
 st.title("📊 " + text.APP_TITLE)
 st.markdown(text.APP_TAGLINE)
-st.info(text.DATA_NOTICE, icon="🔒")
 
 nat = data.national_year().sort_values("year")
 cur = nat[nat["year"] == 2025].iloc[0]
