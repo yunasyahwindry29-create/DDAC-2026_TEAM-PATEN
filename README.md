@@ -66,3 +66,4 @@ sambungkan repo ke Streamlit Community Cloud (entrypoint `app.py`).
 - **Penamaan K/L baru (2024–2025):** diturunkan dari nama satker di dalam dataset, dipadankan
   dengan struktur Kabinet Merah Putih. Lihat halaman **Data & Metodologi** untuk transparansi penuh.
 # DDAC-2026_TEAM-PATEN
+# DDAC-2026_TEAM-PATEN
